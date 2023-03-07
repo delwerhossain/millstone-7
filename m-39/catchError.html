@@ -291,16 +291,18 @@
             </h1>
             <div class=" text-center">
               <span
-              class="block my-4 text-5xl text-center text-gray-800 dark:text-gray-50"
+              class="block my-4 md:text-5xl text-3xl text-center text-gray-800 dark:text-gray-50 "
               id="stopwatch"
             >   <span id="hours">00</span> :
             <span id="minutes">00</span> :
             <span id="seconds">00</span> :
             <span id="milliseconds">000</span></span>
 
+             <div class="grid gap-4  md:grid-cols-3 grid-cols-1 text-center">
               <button  id="start" class="btn bg-gray-500">start</button>
-            <button id="stop" class="btn bg-red-500">stop</button>
-            <button id="reset" class="btn bg-green-600">restart</button>
+              <button id="stop" class="btn bg-red-500">stop</button>
+              <button id="reset" class="btn bg-green-600">restart</button>
+             </div>
             </div>
           </div>
         </div>
