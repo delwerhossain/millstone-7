@@ -72,6 +72,8 @@ const minutesDisplay = document.getElementById("minutes");
 const hoursDisplay = document.getElementById("hours");
 
 function startStopwatch() {
+    document.getElementById("start").classList.add("hidden");
+    document.getElementById("stop").classList.remove("hidden");
   interval = setInterval(() => {
     milliseconds += 10;
 
@@ -98,7 +100,9 @@ function startStopwatch() {
 }
 
 function stopStopwatch() {
-  clearInterval(interval);
+    clearInterval(interval);
+    document.getElementById("start").classList.remove("hidden");
+    document.getElementById("stop").classList.add("hidden");
 }
 
 function resetStopwatch() {
