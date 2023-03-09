@@ -25,7 +25,7 @@ const showProducts = (products) => {
       div.classList.add('product');
       div.innerHTML = `<div class="single-product">
       <div>
-    <img class="product-image" src=${image}></img>
+    <img class="product-image" src=${product.image}></img>
       </div>
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
@@ -120,3 +120,48 @@ document.getElementById("search-btn").addEventListener("click", function () {
  });
 
 
+
+
+ // chat gpt 
+//  const showProducts = (products, searchTerm = '') => {
+   
+//    setInnerText('total_products', products.length);
+
+//    document.getElementById("all-products").innerHTML = "";
+
+//    let filteredProducts = products;
+
+//    if (searchTerm) {
+//       filteredProducts = products.filter((product) => {
+//          return product.category.toLowerCase().includes(searchTerm.toLowerCase());
+//       });
+//    }
+
+//    const allProducts = filteredProducts.slice(0, 10).map((pd) => pd);
+//    for (const product of allProducts) {
+//       const div = document.createElement('div');
+//       div.classList.add('product');
+//       div.innerHTML = `<div class="single-product">
+//       <div>
+//     <img class="product-image" src=${product.image}></img>
+//       </div>
+//       <h3>${product.title}</h3>
+//       <p>Category: ${product.category}</p>
+//       <h2>Price: $ ${product.price}</h2>
+
+//       <button onclick="showProductDetails(${product.id})" id="details-btn"    data-bs-toggle="modal"
+//       data-bs-target="#exampleModal" class="btn btn-outline-secondary mb-2 rounded-1 mt-1">Details</button>
+      
+//       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success border-0 w-100 rounded-0 bg-main py-2">Add to cart</button>
+//       `;
+//       document.getElementById('all-products').appendChild(div);
+//    }
+// };
+
+
+
+// //
+// document.getElementById("search-btn").addEventListener("click", function () {
+//    const inputField = document.getElementById("input-value").value;
+//    showProducts(arr[0], inputField);
+// });
