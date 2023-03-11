@@ -21,7 +21,7 @@ document.getElementById("input-cookies-btn").addEventListener("click", () => {
   else {
     alert("Please enter name and value");
   }
-  //   console.log(get);
+  displayProductsFromLocal();
 });
 
 
@@ -55,11 +55,12 @@ const getList = (name, value) => {
 
 const displayProductsFromLocal = () => {
   let cart = getStorageShopping();
+  document.getElementById("list").innerHTML = "";
   for (const value in cart) {
     console.log(value, cart[value]);
     getList(value, cart[value]);
   };
 };
 
-
 displayProductsFromLocal();
+
