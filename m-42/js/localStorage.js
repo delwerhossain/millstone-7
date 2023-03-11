@@ -1,9 +1,9 @@
-document.getElementById("set-cookies").addEventListener("click", () => {
-  const set = localStorage.setItem("user", "delwer hossain");
-  const get = localStorage.getItem("user");
-  console.log(get);
-  // console.log(set);
-});
+// document.getElementById("set-cookies").addEventListener("click", () => {
+//   const set = localStorage.setItem("user", "delwer hossain");
+//   const get = localStorage.getItem("user");
+//   console.log(get);
+//   // console.log(set);
+// });
 
 document.getElementById("input-cookies-btn").addEventListener("click", () => {
   const name = document.getElementById("input-name").value;
