@@ -1,0 +1,57 @@
+.search-button{
+    background-color: #F06C4E; 
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor:progress;
+    margin-bottom: 2px;
+}
+
+h2{
+    font-family: 'Bebas Neue', sans-serif;
+    color: #363958;
+    font-weight: bold;
+    font-size: 50px;
+}  
+
+h3,h5{
+    font-family: 'Roboto', sans-serif;
+    color: #363958;
+    font-weight: bold;
+    font-size: 24px; 
+}
+
+h2  {
+    text-align: center;
+}
+#mealCard{
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr);
+    grid-gap: 20px;
+}
+
+.meal-items{
+    border: 1px solid #F06C4E;
+    border-radius: 10px;
+    /* padding: 15px; */
+    text-align: center;
+}
+
+.meal-items img {
+    width: 100%;
+
+
+}
+
+.ingredients-info {
+    border: 1px solid indianred;
+    margin: 30px;
+    padding: 10px;
+    width: 400px;
+    
+}
+
+.ingredients-info  img{
+    width: 100%;
+}

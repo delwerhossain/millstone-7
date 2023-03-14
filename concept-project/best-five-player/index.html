@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA World Cup - Select Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<style>
+    .select_played,
+    .budget_section,
+    .header_section,
+    .card {
+        background-color: #0D0D0D;
+        color: #fff;
+    }
+
+    .card {
+        border: 1px solid #434343;
+    }
+
+    .select_played ol li {
+        font-size: 20px;
+    }
+
+    .header_section {
+        background-image: url("./images/bg.png");
+        background-position: center center;
+        background-size: cover;
+        padding: 150px 0;
+    }
+
+    .header_section h1 {
+        font-size: 80px;
+    }
+</style>
+</head>
+
+<body style="background-color: #151515;">
+    <header class="header_section text-center ">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-danger text-bold">Select Your Best Five</h1>
+                <p class="w-50 mx-auto">Our team is the best team. So, we will be win. We need a best players for our
+                    team. Here
+                    we found,
+                    our best player</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="player_section container">
+            <div class="row">
+                <div class="col-md-9 card_list">
+                    <div class="row my-4" id="card_btn">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/messi.png" class="card-img-top" alt="leo-messi">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lionel Messi</h5>
+                                    <button class="btn btn-primary px-4">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/neymar.png" class="card-img-top" alt="leo-messi">
+                                <div class="card-body">
+                                    <h5 class="card-title">Neymar Jr</h5>
+                                    <button class="btn btn-primary px-4">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/m-bappe.png" class="card-img-top" alt="leo-messi">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kylian Mbappé</h5>
+                                    <button class="btn btn-primary px-4">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-4" id="card_btn">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/jamal.jpg" class="card-img-top" alt="leo-messi">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jamal Buiyan</h5>
+                                    <button class="btn btn-primary px-4">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/tobu_barman_in_2020.png" class="card-img-top" alt="leo-messi">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tapu Barman</h5>
+                                    <button class="btn btn-primary px-4">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/mamunul.jpg" class="card-img-top" alt="leo-messi">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mahamudul hasan</h5>
+                                    <button class="btn btn-primary px-4">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-4" id="card_btn">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/vitor.png" class="card-img-top" alt="leo-messi">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vítor Machado</h5>
+                                    <button class="btn btn-primary px-4">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/ramos.png" class="card-img-top" alt="leo-messi">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sergio Ramos</h5>
+                                    <button class="btn btn-primary px-4">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/rentar.png" class="card-img-top" alt="leo-messi">
+                                <div class="card-body">
+                                    <h5 class="card-title">Renato Sanches</h5>
+                                    <button class="btn btn-primary px-4">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 aside_section my-4">
+                    <div class="select_played p-4 rounded">
+                        <h3 class="text-center">Selected - V</h3>
+                        <hr class="mx-3">
+                        <ol id="selected">
+                        </ol>
+                    </div>
+                    <div class="budget_section my-4 p-4 rounded">
+                        <h3 class="text-center">Budget</h3>
+                        <hr class="mx-3">
+                        <div class="mb-5">
+                            <label for="per_player">Per Player:
+                                <input type="text" name="per_player" id="per_player_budget" class="w-100 rounded p-2">
+                            </label>
+                            <button class="btn btn-primary px-4 my-3 w-100" id="calculate_budget">Calculate</button>
+                        </div>
+                        <div>
+                            <h5>Player Expense: $<span id="player_expense">00</span> </h5>
+                        </div>
+                        <div class="mb-5">
+                            <label for="manager_budget">Manager:
+                                <input type="text" name="manager_budget" id="manager_budget" class="w-100 rounded p-2">
+                            </label>
+                            <label for="coach_budget">Coach:
+                                <input type="text" name="coach_budget" id="coach_budget" class="w-100 rounded p-2">
+                            </label>
+                            <button class="btn btn-primary px-4 my-3 w-100" id="calculate_total_budget">Calculate
+                                Total</button>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h5>Total: </h5>
+                            </div>
+                            <div>
+                                <h5 class="text-danger">$<span id="player_total_expense">00</span> </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
