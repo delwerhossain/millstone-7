@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button" class="btn btn-outline btn-secondary">Button</button>
+    <button id="button1" class="btn btn-outline btn-secondary">Button1</button>
+    <button id="button2" class="btn btn-outline btn-secondary">Button2</button>
+    <script>
+      document.getElementById("button").addEventListener("click", () => {
+        try {
+          load();
+        } catch (error) {
+          console.log(error);
+          console.log(error.name);
+          console.log(error.message);
+        }
+      });
+      const abcd = "abfsfj";
+      document.getElementById("button1").addEventListener("click", () => {
+        try {
+          alert("Start of try runs");
+
+          abcd;
+          alert("End of try (never reached)");
+        } catch (err) {
+          alert(`Error has occurred!`);
+        } finally {
+        }
+      });
+      document.getElementById("button2").addEventListener("click", () => {
+        let a = 2343;
+        try {
+          console.log("try start");
+          if (a != Number) throw "a is not defined";
+          else if (a == 2342) throw "jani na";
+          console.log("try end");
+        } catch (error) {
+          console.log("catch:", error);
+        }
+      });
+    </script>
+  </body>
+</html>

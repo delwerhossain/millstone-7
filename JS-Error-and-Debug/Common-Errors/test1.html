@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex flex-col justify-center items-center h-screen gap-5">
+      <input
+        id="input"
+        type="text"
+        placeholder="Type here"
+        class="input input-bordered input-primary w-full max-w-xs"
+      />
+      <button id="button" class="btn btn-outline btn-secondary">Button</button>
+      <div id="comment-div"></div>
+      <button id="button1" class="btn btn-outline btn-secondary">
+        Button1
+      </button>
+      <div id="comment-div"></div>
+      <button id="button2" class="btn btn-outline btn-secondary">
+        Button2
+      </button>
+      <div id="comment-div"></div>
+    </div>
+    <script>
+      const input = document.getElementById("input");
+
+      document.getElementById("button").addEventListener("click", () => {
+        const text = input.value;
+        const commentDiv = document.getElementById("comment-div");
+        console.log("clicked");
+        commentDiv.innerHTML += text;
+        commentDiv.innerText += `
+        `;
+      });
+      document.getElementById("button1").addEventListener("click", () => {
+        const text = input.value;
+        const commentDiv = document.getElementById("comment-div");
+        console.log("clicked1");
+        const p = document.createElement("p");
+        p.innerText = text;
+        commentDiv.appendChild(p);
+      });
+      document.getElementById("button2").addEventListener("click", () => {
+        const text = input.innerText;
+        const commentDiv = document.getElementById("comment-div");
+        console.log("clicked2", text);
+        const div = document.createElement("div");
+        div.innerHTML = `<p>${text}</p>`;
+        commentDiv.appendChild(div);
+      });
+    </script>
+  </body>
+</html>

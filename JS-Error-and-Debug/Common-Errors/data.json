@@ -1,0 +1,65 @@
+{
+  "status": true,
+  "status-code": 200,
+  "message": "Got the required data",
+  "data": [
+    {
+      "id": "01",
+      "name": "Abul Mia",
+      "age": 80,
+      "address": "55/22 B-block python mur",
+      "childrens": [
+        {
+          "name": "Motin Mia",
+          "childrens": ["x", "y", "z"],
+          "age": 50
+        },
+        {
+          "name": "Baten Mia",
+          "childrens": ["p", "q", "r"],
+          "age": 45
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "name": "Alu Mia",
+      "age": 70,
+      "address": "12/A Bokul tola",
+      "childrens": [
+        {
+          "name": "Potol Mia",
+          "childrens": ["x", "y", "z"],
+          "age": 49
+        },
+        {
+          "name": "Mula Mia",
+          "childrens": ["p", "q", "r"],
+          "age": 46
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "name": "Chowdhury Saheeb",
+      "age": 80
+    },
+    {
+      "id": "04",
+      "name": "Tintin Mia",
+      "age": 85,
+      "childrens": [
+        {
+          "name": "Bunty Mia",
+          "childrens": ["x", "y", "z"],
+          "age": 55
+        },
+        {
+          "name": "Senty Mia",
+          "childrens": ["p", "q", "r"],
+          "age": 47
+        }
+      ]
+    }
+  ]
+}

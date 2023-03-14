@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="text-3xl text-center">Let's fix some bugs/errors</h1>
+    <div id="container" class="grid grid-cols-3 gap-5 m-5"></div>
+    <script>
+      fetch("data.json")
+        .then((res) => res.json())
+        .then((data) => showData(data.data));
+
+      function showData(data) {
+        console.log(data);
+        const container = document.getElementById("container");
+        data.forEach((data) => {
+          const div = `<div class="border-2 border-secondary p-5">
+        <p>Name: ${data.name}</p>
+        <br/>
+        <p>Age: ${data.age}</p>
+        <br/>
+        <p>Address: ${data.address ? data.address : "no address found"}</p>
+        <br/>
+        <ul>
+            childrens:
+            ${
+              data.childrens
+                ? data.childrens
+                    .map((x) => {
+                      console.log(x);
+                      return `<p>${x.name}</p>`;
+                    })
+                    .join("")
+                : ""
+            }
+        </ul>
+      </div>`;
+          container.innerHTML += div;
+        });
+      }
+    </script>
+  </body>
+</html>
